@@ -1,0 +1,21 @@
+
+{% extends 'BlogBundle:Page:layout.html.twig' %}
+
+{% block title %}Contact{% endblock%}
+
+
+
+{% block body %}
+    <header>
+        <h1>Contact symblog</h1>
+    </header>
+
+    <p>Want to contact symblog?</p>
+    <div class="well">
+        <form method="post" {{ form_enctype(form) }}>
+            {{ form_widget(form) }}
+            <input type="submit" class="btn btn-primary" />
+        </form>
+    </div>
+   
+{% endblock %}

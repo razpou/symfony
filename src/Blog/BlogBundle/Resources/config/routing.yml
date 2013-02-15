@@ -1,0 +1,16 @@
+# sr Blogger/BlogBundle/Resources/config/routing.yml
+BlogBundle_homepage:
+    pattern:  /
+    defaults: { _controller: BlogBundle:Page:index }
+    
+BlogBundle_contact:
+    pattern:  /contact
+    defaults: { _controller: BlogBundle:Page:contact }
+    
+BlogBundle_inscription:
+    pattern:  /inscription
+    defaults: { _controller: BlogBundle:Page:inscription }
+ 
+BlogBundle_connexion:
+    pattern:  /connexion
+    defaults: { _controller: BlogBundle:Page:connexion }

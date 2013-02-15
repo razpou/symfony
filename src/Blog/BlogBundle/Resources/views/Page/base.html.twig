@@ -1,0 +1,88 @@
+
+
+
+
+          
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+     <title>{% block title %}symblog{% endblock %} - symblog</title>
+
+    <!-- Le styles -->
+    {% block stylesheets %}
+    <link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>
+    <link href="{{ asset('bundles/blog/css/bootstrap.css') }}" type="text/css" rel="stylesheet" />
+    <link href="{{ asset('bundles/blog/css/bootstrap-responsive.css') }}" type="text/css" rel="stylesheet" />
+    {% endblock %}
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    
+   
+
+   
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Project name</a>
+          <div class="nav-collapse collapse">
+             {% block navigation %}
+        
+                    <ul class="nav">
+                        <li><a href="{{ path('BlogBundle_homepage') }}">Home</a></li>
+                        <li><a href="{{ path('BlogBundle_contact') }}">Contact</a></li>
+                        <li><a href="{{ path('BlogBundle_inscription') }}">Inscription</a></li>
+                        <li><a href="{{ path('BlogBundle_connexion') }}">Connexion</a></li>
+                    </ul>
+                
+            {% endblock %}
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+          
+                           
+              
+      
+      
+      
+      
+          <section class="main-col">
+              {% block body %}{% endblock %}
+          </section>
+          <aside class="sidebar">
+              {% block sidebar %}{% endblock %}
+          </aside>
+
+          <div id="footer">
+              {% block footer %}
+
+              {% endblock %}
+          </div>
+        </section>
+
+        {% block javascripts %}
+        
+            <script src=css/bootstrap.js"></script>
+            
+        {% endblock %}    
+    
+    
+      </body>
+</html>
